@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17156"/>
+        <plugIn identifier="com.apple.MapKitIBPlugin" version="17156"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +676,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Project5" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -703,11 +706,56 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Project5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7kd-xB-02o">
+                                <rect key="frame" x="18" y="228" width="57" height="27"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="kRW-yn-OXs">
+                                    <font key="font" metaFont="system" size="22"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <mapView mapType="satellite" zoomEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsBuildings="NO" showsPointsOfInterest="NO" showsCompass="NO" showsZoomControls="NO" translatesAutoresizingMaskIntoConstraints="NO" id="en3-bv-IeP">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="Djj-Tl-8Ot"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="XfG-lQ-9wD" id="cr8-hD-5SL"/>
+                                </connections>
+                            </mapView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xA2-yH-USM">
+                                <rect key="frame" x="376" y="230" width="86" height="22"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Label" id="OyN-20-uYu">
+                                    <font key="font" metaFont="system" size="18"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="en3-bv-IeP" firstAttribute="top" secondItem="7kd-xB-02o" secondAttribute="bottom" constant="13" id="KdF-AU-vbJ"/>
+                            <constraint firstItem="en3-bv-IeP" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="MWU-gA-CZt"/>
+                            <constraint firstItem="7kd-xB-02o" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="15" id="Naa-0j-3qn"/>
+                            <constraint firstItem="7kd-xB-02o" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="OQb-yV-ko0"/>
+                            <constraint firstItem="7kd-xB-02o" firstAttribute="centerY" secondItem="xA2-yH-USM" secondAttribute="centerY" id="XRL-nG-hjW"/>
+                            <constraint firstAttribute="trailing" secondItem="xA2-yH-USM" secondAttribute="trailing" constant="20" symbolic="YES" id="Zom-zQ-bLS"/>
+                            <constraint firstItem="en3-bv-IeP" firstAttribute="top" secondItem="xA2-yH-USM" secondAttribute="bottom" constant="15" id="a9q-0p-Z4z"/>
+                            <constraint firstItem="xA2-yH-USM" firstAttribute="baseline" secondItem="7kd-xB-02o" secondAttribute="firstBaseline" id="abk-SX-81g"/>
+                            <constraint firstAttribute="trailing" secondItem="en3-bv-IeP" secondAttribute="trailing" id="gIG-ti-oEi"/>
+                            <constraint firstItem="xA2-yH-USM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7kd-xB-02o" secondAttribute="trailing" constant="20" id="k62-Fa-eTU"/>
+                            <constraint firstAttribute="bottom" secondItem="en3-bv-IeP" secondAttribute="bottom" id="nt6-7H-At3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="en3-bv-IeP" id="Zdd-KZ-Pbt"/>
+                        <outlet property="questionLabel" destination="7kd-xB-02o" id="RnN-FP-heJ"/>
+                        <outlet property="scoreLabel" destination="xA2-yH-USM" id="Xad-hm-hyl"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

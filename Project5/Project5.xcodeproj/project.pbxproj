@@ -11,6 +11,8 @@
 		E025208E2519C4AB004E9923 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E025208D2519C4AB004E9923 /* ViewController.swift */; };
 		E02520902519C4AD004E9923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E025208F2519C4AD004E9923 /* Assets.xcassets */; };
 		E02520932519C4AD004E9923 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02520912519C4AD004E9923 /* Main.storyboard */; };
+		E025209E2519C78A004E9923 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E025209D2519C78A004E9923 /* MapKit.framework */; };
+		E02520A12519C922004E9923 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02520A02519C922004E9923 /* Pin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		E02520922519C4AD004E9923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E02520942519C4AD004E9923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E02520952519C4AD004E9923 /* Project5.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Project5.entitlements; sourceTree = "<group>"; };
+		E025209D2519C78A004E9923 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E02520A02519C922004E9923 /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E025209E2519C78A004E9923 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +44,7 @@
 			children = (
 				E025208A2519C4AB004E9923 /* Project5 */,
 				E02520892519C4AB004E9923 /* Products */,
+				E025209C2519C78A004E9923 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,12 +61,21 @@
 			children = (
 				E025208B2519C4AB004E9923 /* AppDelegate.swift */,
 				E025208D2519C4AB004E9923 /* ViewController.swift */,
+				E02520A02519C922004E9923 /* Pin.swift */,
 				E025208F2519C4AD004E9923 /* Assets.xcassets */,
 				E02520912519C4AD004E9923 /* Main.storyboard */,
 				E02520942519C4AD004E9923 /* Info.plist */,
 				E02520952519C4AD004E9923 /* Project5.entitlements */,
 			);
 			path = Project5;
+			sourceTree = "<group>";
+		};
+		E025209C2519C78A004E9923 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E025209D2519C78A004E9923 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E02520A12519C922004E9923 /* Pin.swift in Sources */,
 				E025208E2519C4AB004E9923 /* ViewController.swift in Sources */,
 				E025208C2519C4AB004E9923 /* AppDelegate.swift in Sources */,
 			);
