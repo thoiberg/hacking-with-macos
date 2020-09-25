@@ -11,6 +11,9 @@
 		E0D1F0ED251B922B00D257F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D1F0EC251B922B00D257F8 /* ViewController.swift */; };
 		E0D1F0EF251B922F00D257F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0D1F0EE251B922F00D257F8 /* Assets.xcassets */; };
 		E0D1F0F2251B922F00D257F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0D1F0F0251B922F00D257F8 /* Main.storyboard */; };
+		E0D1F0FD251B933700D257F8 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D1F0FB251B933700D257F8 /* Photo.swift */; };
+		E0D1F0FE251B933700D257F8 /* Photo.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D1F0FC251B933700D257F8 /* Photo.xib */; };
+		E0D1F101251CE3A300D257F8 /* black.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E0D1F100251CE3A300D257F8 /* black.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		E0D1F0F1251B922F00D257F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0D1F0F3251B922F00D257F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0D1F0F4251B922F00D257F8 /* Project7.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Project7.entitlements; sourceTree = "<group>"; };
+		E0D1F0FB251B933700D257F8 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		E0D1F0FC251B933700D257F8 /* Photo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Photo.xib; sourceTree = "<group>"; };
+		E0D1F100251CE3A300D257F8 /* black.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = black.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +60,10 @@
 			isa = PBXGroup;
 			children = (
 				E0D1F0EA251B922B00D257F8 /* AppDelegate.swift */,
+				E0D1F100251CE3A300D257F8 /* black.mp4 */,
 				E0D1F0EC251B922B00D257F8 /* ViewController.swift */,
+				E0D1F0FB251B933700D257F8 /* Photo.swift */,
+				E0D1F0FC251B933700D257F8 /* Photo.xib */,
 				E0D1F0EE251B922F00D257F8 /* Assets.xcassets */,
 				E0D1F0F0251B922F00D257F8 /* Main.storyboard */,
 				E0D1F0F3251B922F00D257F8 /* Info.plist */,
@@ -120,6 +129,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0D1F0FE251B933700D257F8 /* Photo.xib in Resources */,
+				E0D1F101251CE3A300D257F8 /* black.mp4 in Resources */,
 				E0D1F0EF251B922F00D257F8 /* Assets.xcassets in Resources */,
 				E0D1F0F2251B922F00D257F8 /* Main.storyboard in Resources */,
 			);
@@ -132,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0D1F0FD251B933700D257F8 /* Photo.swift in Sources */,
 				E0D1F0ED251B922B00D257F8 /* ViewController.swift in Sources */,
 				E0D1F0EB251B922B00D257F8 /* AppDelegate.swift in Sources */,
 			);
