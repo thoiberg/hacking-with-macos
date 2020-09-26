@@ -11,6 +11,8 @@
 		E0A087B9251E3AE300183ECC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A087B8251E3AE300183ECC /* ViewController.swift */; };
 		E0A087BB251E3AE600183ECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0A087BA251E3AE600183ECC /* Assets.xcassets */; };
 		E0A087BE251E3AE600183ECC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0A087BC251E3AE600183ECC /* Main.storyboard */; };
+		E0A087C8251F561A00183ECC /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A087C7251F561A00183ECC /* GameOverView.swift */; };
+		E0A087CC251F5E1600183ECC /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A087CB251F5E1600183ECC /* WindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		E0A087BD251E3AE600183ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0A087BF251E3AE600183ECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0A087C0251E3AE600183ECC /* Project8.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Project8.entitlements; sourceTree = "<group>"; };
+		E0A087C7251F561A00183ECC /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
+		E0A087CB251F5E1600183ECC /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 			children = (
 				E0A087B6251E3AE300183ECC /* AppDelegate.swift */,
 				E0A087B8251E3AE300183ECC /* ViewController.swift */,
+				E0A087C7251F561A00183ECC /* GameOverView.swift */,
+				E0A087CB251F5E1600183ECC /* WindowController.swift */,
 				E0A087BA251E3AE600183ECC /* Assets.xcassets */,
 				E0A087BC251E3AE600183ECC /* Main.storyboard */,
 				E0A087BF251E3AE600183ECC /* Info.plist */,
@@ -132,6 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0A087C8251F561A00183ECC /* GameOverView.swift in Sources */,
+				E0A087CC251F5E1600183ECC /* WindowController.swift in Sources */,
 				E0A087B9251E3AE300183ECC /* ViewController.swift in Sources */,
 				E0A087B7251E3AE300183ECC /* AppDelegate.swift in Sources */,
 			);
