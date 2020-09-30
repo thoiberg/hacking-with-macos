@@ -9,24 +9,24 @@
 /* Begin PBXBuildFile section */
 		E0A088432523670D00183ECC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A088422523670D00183ECC /* AppDelegate.swift */; };
 		E0A088452523670D00183ECC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E0A088442523670D00183ECC /* GameScene.sks */; };
-		E0A088472523670D00183ECC /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E0A088462523670D00183ECC /* Actions.sks */; };
 		E0A088492523670D00183ECC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A088482523670D00183ECC /* GameScene.swift */; };
 		E0A0884B2523670D00183ECC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A0884A2523670D00183ECC /* ViewController.swift */; };
 		E0A0884D2523670F00183ECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0A0884C2523670F00183ECC /* Assets.xcassets */; };
 		E0A088502523670F00183ECC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0A0884E2523670F00183ECC /* Main.storyboard */; };
+		E0A0885B2523687800183ECC /* pop.wav in Resources */ = {isa = PBXBuildFile; fileRef = E0A0885A2523687800183ECC /* pop.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E0A0883F2523670D00183ECC /* Project11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0A088422523670D00183ECC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0A088442523670D00183ECC /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		E0A088462523670D00183ECC /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		E0A088482523670D00183ECC /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		E0A0884A2523670D00183ECC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E0A0884C2523670F00183ECC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0A0884F2523670F00183ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0A088512523670F00183ECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0A088522523670F00183ECC /* Project11.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Project11.entitlements; sourceTree = "<group>"; };
+		E0A0885A2523687800183ECC /* pop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pop.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +61,12 @@
 			children = (
 				E0A088422523670D00183ECC /* AppDelegate.swift */,
 				E0A088442523670D00183ECC /* GameScene.sks */,
-				E0A088462523670D00183ECC /* Actions.sks */,
 				E0A088482523670D00183ECC /* GameScene.swift */,
 				E0A0884A2523670D00183ECC /* ViewController.swift */,
 				E0A0884C2523670F00183ECC /* Assets.xcassets */,
 				E0A0884E2523670F00183ECC /* Main.storyboard */,
 				E0A088512523670F00183ECC /* Info.plist */,
+				E0A0885A2523687800183ECC /* pop.wav */,
 				E0A088522523670F00183ECC /* Project11.entitlements */,
 			);
 			path = Project11;
@@ -131,7 +131,7 @@
 			files = (
 				E0A088452523670D00183ECC /* GameScene.sks in Resources */,
 				E0A0884D2523670F00183ECC /* Assets.xcassets in Resources */,
-				E0A088472523670D00183ECC /* Actions.sks in Resources */,
+				E0A0885B2523687800183ECC /* pop.wav in Resources */,
 				E0A088502523670F00183ECC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
