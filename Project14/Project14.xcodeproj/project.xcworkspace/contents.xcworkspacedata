@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/timhoiberg/Documents/repos/hacking-with-macos/Project14/Project14/GameView.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/timhoiberg/Documents/repos/hacking-with-macos/Project14/Project14/Target.swift">
+   </FileRef>
+   <FileRef
       location = "group:empty.wav">
    </FileRef>
    <FileRef

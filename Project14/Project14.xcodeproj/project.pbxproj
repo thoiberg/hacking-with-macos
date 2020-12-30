@@ -16,6 +16,8 @@
 		E09FA723259C7C6600D37181 /* reload.wav in Resources */ = {isa = PBXBuildFile; fileRef = E09FA720259C7C6600D37181 /* reload.wav */; };
 		E09FA724259C7C6600D37181 /* shot.wav in Resources */ = {isa = PBXBuildFile; fileRef = E09FA721259C7C6600D37181 /* shot.wav */; };
 		E09FA725259C7C6600D37181 /* empty.wav in Resources */ = {isa = PBXBuildFile; fileRef = E09FA722259C7C6600D37181 /* empty.wav */; };
+		E09FA728259C81E400D37181 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09FA727259C81E400D37181 /* Target.swift */; };
+		E09FA72B259CB2CE00D37181 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09FA72A259CB2CE00D37181 /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		E09FA720259C7C6600D37181 /* reload.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = reload.wav; sourceTree = "<group>"; };
 		E09FA721259C7C6600D37181 /* shot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shot.wav; sourceTree = "<group>"; };
 		E09FA722259C7C6600D37181 /* empty.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = empty.wav; sourceTree = "<group>"; };
+		E09FA727259C81E400D37181 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Target.swift; path = "/Users/timhoiberg/Documents/repos/hacking-with-macos/Project14/Project14/Target.swift"; sourceTree = "<absolute>"; };
+		E09FA72A259CB2CE00D37181 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameView.swift; path = "/Users/timhoiberg/Documents/repos/hacking-with-macos/Project14/Project14/GameView.swift"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 		E09FA707259C789700D37181 /* Project14 */ = {
 			isa = PBXGroup;
 			children = (
+				E09FA72A259CB2CE00D37181 /* GameView.swift */,
+				E09FA727259C81E400D37181 /* Target.swift */,
 				E09FA722259C7C6600D37181 /* empty.wav */,
 				E09FA720259C7C6600D37181 /* reload.wav */,
 				E09FA721259C7C6600D37181 /* shot.wav */,
@@ -153,7 +159,9 @@
 			files = (
 				E09FA711259C789700D37181 /* ViewController.swift in Sources */,
 				E09FA70F259C789700D37181 /* GameScene.swift in Sources */,
+				E09FA728259C81E400D37181 /* Target.swift in Sources */,
 				E09FA709259C789700D37181 /* AppDelegate.swift in Sources */,
+				E09FA72B259CB2CE00D37181 /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
