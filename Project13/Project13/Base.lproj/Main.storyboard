@@ -105,15 +105,10 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="aJh-i4-bef"/>
-                                        <menuItem title="Page Setup…" keyEquivalent="P" id="qIS-W8-SiK">
-                                            <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
+                                        <menuItem title="Export" id="qIS-W8-SiK">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="runPageLayout:" target="Ady-hI-5gd" id="Din-rz-gC5"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Print…" keyEquivalent="p" id="aTl-1u-JFS">
-                                            <connections>
-                                                <action selector="print:" target="Ady-hI-5gd" id="qaZ-4w-aoO"/>
+                                                <action selector="export:" target="Ady-hI-5gd" id="oFz-oC-rSS"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -710,14 +705,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="571" height="540"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mbx-NX-XJ2">
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mbx-NX-XJ2">
                                 <rect key="frame" x="20" y="20" width="281" height="500"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="d03-ql-l7F"/>
+                                    <constraint firstAttribute="height" constant="500" id="fuT-xf-M5G"/>
+                                </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="CLT-R7-EHP"/>
                             </imageView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8r0-Ap-crU">
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="8r0-Ap-crU">
                                 <rect key="frame" x="321" y="0.0" width="230" height="540"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cKc-UP-6mu">
                                         <rect key="frame" x="0.0" y="501" width="230" height="17"/>
@@ -752,6 +749,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                     <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="5gI-5U-AMq" id="ZMQ-gQ-NAc"/>
+                                                    </connections>
                                                 </textView>
                                             </subviews>
                                         </clipView>
@@ -781,15 +781,42 @@
                                             <font key="font" metaFont="menu"/>
                                             <menu key="menu" id="yad-lF-eze">
                                                 <items>
-                                                    <menuItem title="Tiny" state="on" id="y28-g5-zJe"/>
-                                                    <menuItem title="Extra Small" id="6Pg-eh-A0r"/>
-                                                    <menuItem title="Smaller" id="t7Z-z2-eQt"/>
-                                                    <menuItem title="Default" id="rGH-aD-MIE"/>
-                                                    <menuItem title="Larger" id="xOf-11-hax">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    <menuItem title="Tiny" state="on" id="y28-g5-zJe">
+                                                        <connections>
+                                                            <action selector="changeFontSize:" target="5gI-5U-AMq" id="a73-zF-WKI"/>
+                                                        </connections>
                                                     </menuItem>
-                                                    <menuItem title="Extra Large" id="Fgl-Yw-4Ak"/>
-                                                    <menuItem title="Massive" id="acI-pJ-qIk"/>
+                                                    <menuItem title="Extra Small" tag="1" id="6Pg-eh-A0r">
+                                                        <connections>
+                                                            <action selector="changeFontSize:" target="5gI-5U-AMq" id="Wtq-sI-C0e"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Smaller" tag="2" id="t7Z-z2-eQt">
+                                                        <connections>
+                                                            <action selector="changeFontSize:" target="5gI-5U-AMq" id="Ocs-kx-esV"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Default" tag="3" id="rGH-aD-MIE">
+                                                        <connections>
+                                                            <action selector="changeFontSize:" target="5gI-5U-AMq" id="SJR-Jf-pO8"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Larger" tag="4" id="xOf-11-hax">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="changeFontSize:" target="5gI-5U-AMq" id="aro-4c-DqP"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Extra Large" tag="5" id="Fgl-Yw-4Ak">
+                                                        <connections>
+                                                            <action selector="changeFontSize:" target="5gI-5U-AMq" id="q7h-Pv-3FC"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Massive" tag="6" id="acI-pJ-qIk">
+                                                        <connections>
+                                                            <action selector="changeFontSize:" target="5gI-5U-AMq" id="JT1-4t-MRm"/>
+                                                        </connections>
+                                                    </menuItem>
                                                 </items>
                                             </menu>
                                         </popUpButtonCell>
@@ -798,6 +825,9 @@
                                         <rect key="frame" x="120" y="304" width="110" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <color key="color" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <connections>
+                                            <action selector="changeFontColor:" target="5gI-5U-AMq" id="IIN-Fh-R6I"/>
+                                        </connections>
                                     </colorWell>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hj2-hP-y2H">
                                         <rect key="frame" x="0.0" y="258" width="124" height="17"/>
@@ -816,7 +846,11 @@
                                             <font key="font" metaFont="menu"/>
                                             <menu key="menu" id="1D3-R3-8Zl">
                                                 <items>
-                                                    <menuItem title="No background image" state="on" tag="999" id="27t-AQ-rtD"/>
+                                                    <menuItem title="No background image" state="on" tag="999" id="27t-AQ-rtD">
+                                                        <connections>
+                                                            <action selector="changeBackgroundImage:" target="5gI-5U-AMq" id="rAp-XG-BGp"/>
+                                                        </connections>
+                                                    </menuItem>
                                                     <menuItem isSeparatorItem="YES" id="Jni-Do-ZbN"/>
                                                 </items>
                                             </menu>
@@ -844,11 +878,17 @@
                                         <rect key="frame" x="0.0" y="131" width="110" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <color key="color" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <connections>
+                                            <action selector="changeBackgroundColorStart:" target="5gI-5U-AMq" id="a1T-Qh-zKy"/>
+                                        </connections>
                                     </colorWell>
                                     <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cdh-18-SNQ">
                                         <rect key="frame" x="120" y="131" width="110" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <color key="color" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <connections>
+                                            <action selector="changeBackgroundColorEnd:" target="5gI-5U-AMq" id="36N-TZ-PdI"/>
+                                        </connections>
                                     </colorWell>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfQ-Ke-ZaT">
                                         <rect key="frame" x="0.0" y="84" width="230" height="17"/>
@@ -870,6 +910,9 @@
                                                 <segment label="Strong" width="74"/>
                                             </segments>
                                         </segmentedCell>
+                                        <connections>
+                                            <action selector="changeDropShadowStrength:" target="5gI-5U-AMq" id="kWJ-Kk-u1f"/>
+                                        </connections>
                                     </segmentedControl>
                                     <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SQz-ox-0ed">
                                         <rect key="frame" x="0.0" y="25" width="230" height="24"/>
@@ -882,11 +925,39 @@
                                                 <segment label="Both" width="74"/>
                                             </segments>
                                         </segmentedCell>
+                                        <connections>
+                                            <action selector="changeDropShadowTarget:" target="5gI-5U-AMq" id="ava-Dd-77K"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="540" id="JyT-Wh-Xx0"/>
+                                    <constraint firstAttribute="width" constant="230" id="u93-Pf-CXx"/>
+                                </constraints>
                             </customView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="Mbx-NX-XJ2" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="20" symbolic="YES" id="6mm-K9-GGn"/>
+                            <constraint firstAttribute="trailing" secondItem="8r0-Ap-crU" secondAttribute="trailing" constant="20" symbolic="YES" id="En1-bj-YQV"/>
+                            <constraint firstAttribute="bottom" secondItem="8r0-Ap-crU" secondAttribute="bottom" id="G8a-pT-CuB"/>
+                            <constraint firstItem="8r0-Ap-crU" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" id="PhG-rD-FEj"/>
+                            <constraint firstAttribute="bottom" secondItem="Mbx-NX-XJ2" secondAttribute="bottom" constant="20" symbolic="YES" id="Vu2-fD-vhy"/>
+                            <constraint firstItem="Mbx-NX-XJ2" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="20" symbolic="YES" id="hxU-yA-HGV"/>
+                            <constraint firstItem="8r0-Ap-crU" firstAttribute="leading" secondItem="Mbx-NX-XJ2" secondAttribute="trailing" constant="20" id="rHT-ey-8os"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundColorEnd" destination="cdh-18-SNQ" id="bJv-2W-d2W"/>
+                        <outlet property="backgroundColorStart" destination="PlE-LI-9UO" id="JlF-tW-Uxt"/>
+                        <outlet property="backgroundImage" destination="N5a-OL-yLb" id="dah-dC-3fY"/>
+                        <outlet property="caption" destination="rmz-ra-z0w" id="TE1-44-ge8"/>
+                        <outlet property="dropShadowStrength" destination="Lc7-Vu-LBZ" id="8eP-oP-0gr"/>
+                        <outlet property="dropShadowTarget" destination="SQz-ox-0ed" id="yOh-nw-Dcg"/>
+                        <outlet property="fontColor" destination="n03-on-K4I" id="WFu-Vo-Yc6"/>
+                        <outlet property="fontName" destination="Kxz-QM-aS0" id="3eD-34-3Yy"/>
+                        <outlet property="fontSize" destination="DkL-lD-4gU" id="nfw-sy-EpJ"/>
+                        <outlet property="imageView" destination="Mbx-NX-XJ2" id="IDT-ca-OmW"/>
+                    </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
