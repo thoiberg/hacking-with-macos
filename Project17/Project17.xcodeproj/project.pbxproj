@@ -13,6 +13,9 @@
 		E0DA0D11259DD6FE00876931 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DA0D10259DD6FE00876931 /* ViewController.swift */; };
 		E0DA0D13259DD70000876931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0DA0D12259DD70000876931 /* Assets.xcassets */; };
 		E0DA0D16259DD70000876931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0DA0D14259DD70000876931 /* Main.storyboard */; };
+		E0DA0D21259DD88400876931 /* balls.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E0DA0D20259DD88400876931 /* balls.atlas */; };
+		E0DA0D24259DD94D00876931 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DA0D23259DD94D00876931 /* Ball.swift */; };
+		E0DA0D28259DE94400876931 /* Fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = E0DA0D27259DE94400876931 /* Fire.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		E0DA0D15259DD70000876931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0DA0D17259DD70000876931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0DA0D18259DD70000876931 /* Project17.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Project17.entitlements; sourceTree = "<group>"; };
+		E0DA0D20259DD88400876931 /* balls.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = balls.atlas; sourceTree = "<group>"; };
+		E0DA0D23259DD94D00876931 /* Ball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
+		E0DA0D27259DE94400876931 /* Fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fire.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,12 +64,15 @@
 			isa = PBXGroup;
 			children = (
 				E0DA0D08259DD6FE00876931 /* AppDelegate.swift */,
+				E0DA0D23259DD94D00876931 /* Ball.swift */,
 				E0DA0D0A259DD6FE00876931 /* GameScene.sks */,
 				E0DA0D0E259DD6FE00876931 /* GameScene.swift */,
+				E0DA0D27259DE94400876931 /* Fire.sks */,
 				E0DA0D10259DD6FE00876931 /* ViewController.swift */,
 				E0DA0D12259DD70000876931 /* Assets.xcassets */,
 				E0DA0D14259DD70000876931 /* Main.storyboard */,
 				E0DA0D17259DD70000876931 /* Info.plist */,
+				E0DA0D20259DD88400876931 /* balls.atlas */,
 				E0DA0D18259DD70000876931 /* Project17.entitlements */,
 			);
 			path = Project17;
@@ -126,8 +135,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0DA0D21259DD88400876931 /* balls.atlas in Resources */,
 				E0DA0D0B259DD6FE00876931 /* GameScene.sks in Resources */,
 				E0DA0D13259DD70000876931 /* Assets.xcassets in Resources */,
+				E0DA0D28259DE94400876931 /* Fire.sks in Resources */,
 				E0DA0D16259DD70000876931 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0DA0D24259DD94D00876931 /* Ball.swift in Sources */,
 				E0DA0D11259DD6FE00876931 /* ViewController.swift in Sources */,
 				E0DA0D0F259DD6FE00876931 /* GameScene.swift in Sources */,
 				E0DA0D09259DD6FE00876931 /* AppDelegate.swift in Sources */,
