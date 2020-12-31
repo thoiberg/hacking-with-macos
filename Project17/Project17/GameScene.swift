@@ -36,7 +36,7 @@ class GameScene: SKScene {
             var col = [Ball]()
             
             for y in 0 ..< ballsPerColumn {
-                let ball = createBall(row: x, col: y)
+                let ball = createBall(row: y, col: x)
                 col.append(ball)
             }
             
