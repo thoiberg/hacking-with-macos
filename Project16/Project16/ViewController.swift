@@ -8,6 +8,7 @@
 import Cocoa
 
 class ViewController: NSViewController {
+    @objc dynamic var reviews = [Review]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
